@@ -94,12 +94,6 @@ var app = (function () {
 	}
 
 	/**
-	 * @returns {Text} */
-	function space() {
-		return text(' ');
-	}
-
-	/**
 	 * @param {Element} node
 	 * @param {string} attribute
 	 * @param {string} [value]
@@ -692,11 +686,6 @@ var app = (function () {
 		let t0;
 		let t1;
 		let t2;
-		let t3;
-		let p;
-		let t4;
-		let a;
-		let t6;
 
 		const block = {
 			c: function create() {
@@ -705,17 +694,8 @@ var app = (function () {
 				t0 = text("Hello ");
 				t1 = text(/*name*/ ctx[0]);
 				t2 = text("!");
-				t3 = space();
-				p = element("p");
-				t4 = text("Visit the ");
-				a = element("a");
-				a.textContent = "Svelte tutorial";
-				t6 = text(" to learn how to build Svelte apps.");
 				attr_dev(h1, "class", "svelte-1tky8bj");
 				add_location(h1, file, 5, 1, 46);
-				attr_dev(a, "href", "https://svelte.dev/tutorial");
-				add_location(a, file, 6, 14, 83);
-				add_location(p, file, 6, 1, 70);
 				attr_dev(main, "class", "svelte-1tky8bj");
 				add_location(main, file, 4, 0, 38);
 			},
@@ -728,11 +708,6 @@ var app = (function () {
 				append_dev(h1, t0);
 				append_dev(h1, t1);
 				append_dev(h1, t2);
-				append_dev(main, t3);
-				append_dev(main, p);
-				append_dev(p, t4);
-				append_dev(p, a);
-				append_dev(p, t6);
 			},
 			p: function update(ctx, [dirty]) {
 				if (dirty & /*name*/ 1) set_data_dev(t1, /*name*/ ctx[0]);
